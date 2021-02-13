@@ -1,0 +1,81 @@
+@media screen and (min-width:768px) { 
+    header{
+        height: 150px;
+        img{
+            height: 150px;
+        }
+    }
+    .luna-container{
+        &__image{
+            width: 65%;
+            top:147px;
+        }
+    }
+    .luna{
+        max-width:550px;
+        &__title{
+            font-size: 25px;
+            left:6vw;
+            top:100px;
+        }
+        &__explain{
+            font-size: 20px;
+            top:160px;
+            left:7vw;
+        }
+        &__wrap{
+            top:730px;
+            left:150px;
+        }
+    }
+    .fortune{
+        margin: 280px auto 70px ;
+        &__title{
+            font-size: 25px;
+        }
+        &__ranking{
+            font-size: 23px;
+        }
+        &__explain{
+            font-size: 19px;
+        }
+    }
+}
+@media screen and (min-width:1024px) { 
+    .luna-container{
+        &__image{
+            width: 47%;
+            top:147px;
+        }
+    }
+    .luna{
+        max-width:600px;
+        &__title{
+            font-size: 27px;
+            left:3vw;
+            top:150px;
+        }
+        &__explain{
+            font-size: 21px;
+            left:4vw;
+            top:210px;
+        }
+        &__wrap{
+            top:850px;
+            left:190px;
+        }
+    }
+    .fortune{
+        margin-top: 430px;
+        margin-bottom: 100px;
+        &__title{
+            font-size: 27px;
+        }
+        &__ranking{
+            font-size: 25px;
+        }
+        &__explain{
+            font-size: 21px;
+        }
+    }
+}

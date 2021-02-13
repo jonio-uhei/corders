@@ -1,0 +1,456 @@
+@charset "UTF-8";
+*{
+    box-sizing:border-box;
+}
+a{
+    text-decoration:none;
+}
+h1,h2{
+    font-family: ピグモ, 'Noto Serif JP', serif;
+    color: #79A3DD;
+}
+li{
+    list-style:none;
+    line-height:2em;
+}
+p{
+    line-height:2em;
+}
+img{
+    width: 100%;
+}
+.container{
+    max-width:650px;
+    margin:0 auto;
+    padding: 0 20px;
+}
+
+/*----------------------------ここからハンバーガーメニュー----------------------------------*/
+.burger-btn{
+    display: block;
+    width: 39px;
+    height: 39px;
+    position: relative;
+    z-index: 3;
+}
+.burger-btn.close .bars__top{
+    transform: translate(-50%,10px) rotate(45deg);
+    transition: transform .3s;
+}
+.burger-btn.close .bars__mid{
+    opacity: 0;
+    transition: opacity .3s;
+}
+.burger-btn.close .bars__bottom{
+    transform: translate(-50%,-8px) rotate(-45deg);
+    transition: transform .3s;
+}
+.bar{
+    width: 20px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #79A3DD;
+}
+.bars{
+    &__top{
+        top: 10px;
+    }
+    &__mid{
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &__bottom{
+        bottom: 10px;
+    }
+}
+.nav-wrapper{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.nav{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(255,255,255,0.9);
+    z-index: 2;
+    position:fixed;
+    top:0;
+    &__item{
+        margin-right: 0;
+        margin-bottom: 40px;
+        color: #F59109;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    &__list{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    a{
+        color: #79A3DD;
+    }
+}
+/*----------------------------ここまでハンバーガーメニュー----------------------------------*/
+
+/*----------------------------ここから水平方向横スクロール*--------------------------------*/
+.horizon{
+    overflow:auto;
+    white-space:nowrap;
+    margin-top: 30px;
+    &__list{
+        display: inline-block;
+    }
+    &__image{
+        width: 75%;
+        display: block;
+        margin:0 auto 10px;
+    }
+    &--little{
+        width: 70%;
+    }
+    &__text{
+        padding-bottom: 10px;
+    }
+}
+/*----------------------------ここまで水平方向横スクロール*--------------------------------*/
+
+
+/*----------------------------ここからアコーディオン--------------------------------------*/
+.question-response{
+    margin-top: 70px;
+    &__title{
+        text-align: center;
+    }
+    &__list{
+        margin:20px;
+        border-bottom:1px solid #ccc;
+        position:relative;
+        cursor:pointer;
+        text-align: left;
+    }
+    &__answer{
+        font-size: 12px;
+        padding: 5px 0px;
+        margin-bottom: 15px;
+        display:none;
+    }
+    &__question{
+        font-size: 14px;
+    }
+    span{
+        position:absolute;
+        top:0;
+        right:5px;
+        color:#ccc;
+        font-size:13px;
+    }
+}
+/*---------------------------------ここまでアコーディオン----------------------------------*/
+
+header{
+    padding: 20px;
+}
+.header-container{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    &__site-title{
+        font-size: 25px;
+        animation-name: left-fadein;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+       
+    }
+}
+.operation{
+    animation-name: bottom-fadein;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    @keyframes bottom-fadein {
+        0% {
+        opacity:0;
+           transform: translateY(100px);
+        }
+        100% {
+           opacity: 1;
+           transform: translateY(0);
+        }
+    }
+    span{
+        color:#F59109;
+        font-weight: bold;
+    }
+}
+.preparation{
+    margin-top: 30px;
+    span{
+        color:#F59109;
+    }
+}
+.section{
+    margin-top: 50px;
+    &__title{
+        text-align: center;
+        font-size: 20px;
+        color: #79A3DD;
+        font-weight: bold;
+        font-family: ピグモ, 'Noto Serif JP', serif;
+    }
+    &__explain{
+        margin-top: 10px;
+    }
+    &__movie{
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+    span{
+        color:#F59109;
+        font-weight: bold;
+    }
+    li{
+        margin-bottom: 10px;
+    }
+}
+.course{
+    padding: 120px 20px 50px 20px;
+    position:relative;
+    &__course{
+        font-size: 20px;
+        text-align: center;
+    }
+    &__star{
+        position:absolute;
+        left:60px;
+        animation-name: star;
+        animation-iteration-count: infinite;
+        animation-duration: 3.5s;
+        animation-timing-function:ease-in-out;
+        width: 25px;
+    }
+    @keyframes star {
+        0% {opacity: 0;
+        }
+        50%{
+            opacity:0.5;
+        }
+        100% {opacity: 1;
+        }
+    }
+    
+    &__star1{
+        position:absolute;
+        left:50px;
+        top:75px;
+        animation-name: star1;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        animation-timing-function:ease-in-out;
+        animation-delay: 2s;
+        width: 25px;
+    }
+    @keyframes star1 {
+        0% {opacity: 0;
+        }
+        50%{
+            opacity:0.5;
+        }
+        100% {opacity: 1;
+        }
+    }
+    &__star3{
+        position:absolute;
+        right:50px;
+        animation-name: star3;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        animation-timing-function:ease-in-out;
+        animation-delay: 2.5s;
+        width: 25px;
+    }
+    @keyframes star3 {
+        0% {opacity: 0;
+        }
+        50%{
+            opacity:0.5;
+        }
+        100% {opacity: 1;
+        }
+    }
+    &__star4{
+        position:absolute;
+        right:20px;
+        animation-name: star4;
+        animation-iteration-count: infinite;
+        animation-duration: 1.5s;
+        animation-timing-function:ease-in-out;
+        animation-delay: 2s;
+        width: 25px;
+    }
+    @keyframes star4 {
+        0% {opacity: 0;
+        }
+        50%{
+            opacity:0.5;
+        }
+        100% {opacity: 1;
+        }
+    }
+    &__first-view{
+        display: block;
+        width: 60%;
+        margin:40px auto 0;
+    }
+    &__explain{
+        margin-top: 30px;
+    }
+    &--bold{
+        font-weight: bold;
+        cursor:pointer;
+        color:#fa1807;
+    }
+    span{
+        color:#fa1807;
+    }
+} 
+.course{
+    &__link{
+        color: #79A3DD;
+        font-weight: bold;
+    }
+    span{
+        color:#F59109;
+        font-weight: bold;
+    }
+}
+.message{
+    margin-top: 70px;
+    span{
+        color:#F59109;
+    }
+}
+.information{
+    margin-top: 70px;
+    &__wrap{
+        margin-top: 20px;
+    }
+    &__title{
+        text-align: center;
+        font-size: 20px;
+    }
+    &__list{
+        display: flex;
+        justify-content:space-around;
+    }
+    &__date{
+        display: block;
+        font-size: 14px;
+    }
+    &__explain{
+        font-size: 14px;
+    }
+    a{
+        color:#000;
+        display: block;
+    }
+}
+.recruitment{
+    width: 70%;
+    display: block;
+    margin:30px auto 0;
+}
+footer{
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 70px;
+}
+.jonio{
+    background-color:#79A3DD;
+    color:#fff;
+    font-family: ピグモ, 'Noto Serif JP', serif;
+    width: 40px;
+    height: 40px;
+    line-height:40px;
+    border-radius:20px;
+    text-align: center;
+    display: inline-block;
+}
+.right{
+    display: inline-block;
+    font-size: 12px;
+}
+@media screen and (min-width:768px) { 
+    p{
+        font-size: 20px;
+    }
+    .header-container{
+        &__site-title{
+            font-size: 30px;     
+        }
+        &__logo{
+            vertical-align:middle;
+        }
+    }
+    .left-fadein{
+        padding-top: 100px;
+        &__star1{
+            left:200px;
+            top:50px;
+        }
+        &__star{
+            left:160px;
+        }
+        &__star4{
+            right:180px;
+            top:60px;
+        }
+        &__star3{
+            right:150px;
+        }
+        &__course{
+            font-size: 25px;
+        }
+    }
+    .right{
+        font-size: 15px;
+    }
+}
+@media screen and (min-width:1024px) { 
+    .header-container{
+        &__site-title {
+            font-size: 35px;
+        }
+        &__logo{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+
+
+.rightfadein{
+    opacity:1;
+    transform:translateX(0); 
+}
+.startLeft{
+    transform:translateX(-100px);
+    opacity:0; 
+    transition:opacity 2s,transform 3s;
+}
+
+
+

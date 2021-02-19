@@ -26,12 +26,6 @@ img {
   width: 100%;
 }
 
-.container {
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 /*----------------------------ここからハンバーガーメニュー----------------------------------*/
 .burger-btn {
   display: block;
@@ -127,8 +121,158 @@ img {
   text-align: center;
 }
 
+.nav__fade {
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.nav__fade1 {
+  -webkit-animation-name: fadein1;
+          animation-name: fadein1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadein1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadein1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.nav__fade2 {
+  -webkit-animation-name: fadein2;
+          animation-name: fadein2;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadein2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadein2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.nav__fade3 {
+  -webkit-animation-name: fadein3;
+          animation-name: fadein3;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadein3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadein3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 .nav a {
   color: #79A3DD;
+  font-family: ピグモ, 'Noto Serif JP', serif;
+  font-size: 20px;
 }
 
 /*----------------------------ここまでハンバーガーメニュー----------------------------------*/
@@ -195,11 +339,19 @@ img {
 }
 
 /*---------------------------------ここまでアコーディオン----------------------------------*/
+/*-----------------------------ここからスマホ------------------------------------------*/
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 header {
   padding: 20px;
 }
 
 .header-container {
+  max-width: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,6 +375,32 @@ header {
           animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes bottom-fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes bottom-fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 .operation {
   -webkit-animation-name: bottom-fadein;
           animation-name: bottom-fadein;
@@ -232,19 +410,6 @@ header {
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes bottom-fadein {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
 }
 
 @keyframes bottom-fadein {
@@ -291,8 +456,8 @@ header {
 
 .section__movie {
   display: block;
-  width: 100%;
-  margin-top: 20px;
+  max-width: 100%;
+  margin: 20px auto 0;
 }
 
 .section span {
@@ -305,6 +470,8 @@ header {
 }
 
 .course {
+  max-width: 650px;
+  margin: 0 auto;
   padding: 120px 20px 50px 20px;
   position: relative;
 }
@@ -316,7 +483,7 @@ header {
 
 .course__star {
   position: absolute;
-  left: 60px;
+  left: 10%;
   -webkit-animation-name: star;
           animation-name: star;
   -webkit-animation-iteration-count: infinite;
@@ -354,7 +521,7 @@ header {
 
 .course__star1 {
   position: absolute;
-  left: 50px;
+  left: 20%;
   top: 75px;
   -webkit-animation-name: star1;
           animation-name: star1;
@@ -395,7 +562,7 @@ header {
 
 .course__star3 {
   position: absolute;
-  right: 50px;
+  right: 12%;
   -webkit-animation-name: star3;
           animation-name: star3;
   -webkit-animation-iteration-count: infinite;
@@ -435,7 +602,7 @@ header {
 
 .course__star4 {
   position: absolute;
-  right: 20px;
+  right: 5%;
   -webkit-animation-name: star4;
           animation-name: star4;
   -webkit-animation-iteration-count: infinite;
@@ -498,9 +665,19 @@ header {
   font-weight: bold;
 }
 
+.course p {
+  margin-top: 20px;
+}
+
 .course span {
   color: #F59109;
   font-weight: bold;
+}
+
+.message-wrap {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .message {
@@ -575,9 +752,14 @@ footer {
   font-size: 12px;
 }
 
+/*-----------------------------ここまでスマホ------------------------------------------*/
+/*-----------------------------ここからタブレット------------------------------------------*/
 @media screen and (min-width: 768px) {
   p {
     font-size: 20px;
+  }
+  .header-container {
+    padding: 0 20px;
   }
   .header-container__site-title {
     font-size: 30px;
@@ -585,53 +767,189 @@ footer {
   .header-container__logo {
     vertical-align: middle;
   }
-  .left-fadein {
-    padding-top: 100px;
+  .section__explain {
+    font-size: 20px;
   }
-  .left-fadein__star1 {
-    left: 200px;
-    top: 50px;
+  .horizon__image {
+    width: 60%;
   }
-  .left-fadein__star {
-    left: 160px;
+  .horizon--little {
+    width: 55%;
   }
-  .left-fadein__star4 {
-    right: 180px;
-    top: 60px;
+  .horizon__list {
+    width: 70%;
   }
-  .left-fadein__star3 {
-    right: 150px;
+  .course__first-view {
+    width: 50%;
   }
-  .left-fadein__course {
-    font-size: 25px;
+  .course__star {
+    left: 25%;
+    width: 30px;
   }
-  .right {
-    font-size: 15px;
+  .course__star1 {
+    width: 30px;
+    left: 27%;
+  }
+  .course__star3 {
+    width: 30px;
+    right: 25%;
+  }
+  .course__star4 {
+    width: 30px;
+    right: 20%;
+  }
+  .recruit {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
   }
 }
 
+/*-----------------------------ここまでタブレット------------------------------------------*/
+/*-----------------------------ここからPC------------------------------------------*/
 @media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1000px;
+    margin-top: 70px;
+  }
+  header {
+    padding-top: 40px;
+  }
+  .header-container {
+    max-width: 900px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
   .header-container__site-title {
     font-size: 35px;
   }
   .header-container__logo {
     margin-bottom: 10px;
   }
+  .nav-wrapper {
+    display: block;
+    width: 11vw;
+    height: 0vh;
+    position: initial;
+    z-index: 0;
+  }
+  .nav {
+    position: absolute;
+    background: none;
+    z-index: 0;
+    right: 100px;
+    top: 40px;
+    width: 37vw;
+    height: 0;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: initial;
+    -webkit-transform: initial;
+            transform: initial;
+    text-align: initial;
+  }
+  .nav__item {
+    margin-bottom: 0;
+    margin-left: 20px;
+    font-size: 14px;
+  }
+  .nav a {
+    font-size: 16px;
+  }
+  .burger-btn {
+    display: none;
+  }
+  .section {
+    margin-top: 80px;
+  }
+  .section__title {
+    font-size: 35px;
+  }
+  .section__explain {
+    margin-top: 50px;
+  }
+  .horizon--little {
+    width: 40%;
+  }
+  .preparation {
+    margin-top: 50px;
+  }
+  .course {
+    max-width: 1200px;
+    margin-top: 80px;
+    padding-top: 0;
+  }
+  .course__course {
+    font-size: 35px;
+  }
+  .course__first-view {
+    width: 30%;
+  }
+  .course__star {
+    left: 26%;
+    top: 5%;
+  }
+  .course__star1 {
+    left: 23%;
+    top: -3%;
+  }
+  .course__star3 {
+    right: 28%;
+  }
+  .course__star4 {
+    right: 25%;
+  }
+  .course p {
+    margin-top: 40px;
+  }
+  .recruit {
+    width: 50%;
+  }
+  .message-wrap {
+    max-width: 1200px;
+  }
+  .question-response {
+    margin-top: 80px;
+  }
+  .question-response__title {
+    font-size: 35px;
+  }
+  .question-response__lists {
+    margin-top: 50px;
+  }
+  .question-response__question {
+    font-size: 20px;
+  }
+  .question-response__answer {
+    font-size: 15px;
+  }
+  .question-response span {
+    font-size: 15px;
+  }
+  .information {
+    margin-top: 80px;
+  }
+  .information__title {
+    font-size: 35px;
+  }
+  .information__date {
+    font-size: 20px;
+  }
+  .information__explain {
+    font-size: 20px;
+  }
+  .information__wrap {
+    margin-top: 50px;
+  }
 }
 
-.rightfadein {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.startLeft {
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
-  opacity: 0;
-  -webkit-transition: opacity 2s,-webkit-transform 3s;
-  transition: opacity 2s,-webkit-transform 3s;
-  transition: opacity 2s,transform 3s;
-  transition: opacity 2s,transform 3s,-webkit-transform 3s;
-}
+/*-----------------------------ここまでPC------------------------------------------*/
 /*# sourceMappingURL=style.css.map */
